@@ -1,0 +1,60 @@
+@import "common.less";
+.profile{
+    &__form{
+        width:500px;
+        margin:40px auto;
+
+        &__inputs{
+            width:100%;
+            border-radius: 10px;
+            background: #FFFFFF;
+            border: 1px solid rgba(94, 112, 211, 0.5);
+            height:48px;
+            margin-bottom:26px;
+            padding:0px 15px;
+        }
+    }
+    &__p{
+        font-weight: bold;
+        font-size: medium;
+    }
+    &__form__checkbox{
+        margin-right: 10px;
+    }
+}
+.footer{
+    position: absolute;
+    bottom: 0px;
+    width: 1240px;
+    left: 100px;
+    &__left{
+        &__cta{
+            color:@color--black !important;
+            font-size:16px;
+            cursor:pointer;
+            &:hover{
+                color:@color--black;
+            }
+            span{
+                font-size:16px;
+                padding-left:16px;
+            }
+        }
+    }
+
+    &__cta{
+        height: 40px;
+        -webkit-user-select: none;
+        user-select: none;
+        cursor: default;
+        background: #5E70D3;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        color: #fff;
+        width: 165px;
+        display: block;
+        text-align: center;
+        line-height: 40px;
+        float: right;
+    }
+}

@@ -1,0 +1,29 @@
+@import "common.less";
+body {
+    margin: 0px;
+}
+.navbar {
+    background-color: @backcolor--nav--primary;
+    height: 70px;
+    &__brand {
+        width: 100px;
+        height: 70px;
+        background-color: @backcolor--nav--logo;
+        position: fixed;
+        a{
+            line-height: 70px;
+        }
+        &_icon {
+            line-height: 70px;
+        }
+    }
+    &__header {
+        padding-left: 59px;
+        .welcometext-p,
+        .welcometext{
+            margin-bottom: 0px;
+            color: @color--white;
+        }
+        margin-left:100px
+    }
+}

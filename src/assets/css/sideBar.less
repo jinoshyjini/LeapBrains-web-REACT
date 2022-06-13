@@ -1,0 +1,42 @@
+@import "common.less";
+body {
+    margin: 0px;
+}
+.sidebar{
+    width: 100px;
+    &__light{
+        background-color: white;
+        height: 100vh;
+        position: fixed;
+        top:70px;
+    }
+    &__nav{
+        width: 100%;
+        display: block;
+        padding-top: 25px;
+        ul{
+            height:calc(100vh - 105px);
+            overflow: auto;
+            li{
+                height: 60px;
+                a{
+                    color: #303F9F;
+                    text-decoration: none;
+                    font-size: 12px;
+                    padding: 10px 0px;
+                    display: block;
+                    .icon{
+                        display: block;
+                    }
+                }
+                &.active{
+                    background-color: rgba(63, 81, 181, 0.1);;
+                }
+            }
+        }
+    }
+}
+.profileimage{
+    width: 50px;
+    height: 50px;
+}

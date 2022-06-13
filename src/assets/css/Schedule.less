@@ -1,0 +1,240 @@
+:root {
+    --fc-small-font-size: .85em;
+    --fc-page-bg-color: rgb(235, 223, 223);
+    --fc-neutral-bg-color: rgba(208, 208, 208, 0.3);
+    --fc-neutral-text-color: #a5a4a4;
+    --fc-border-color: rgb(212, 207, 207);
+  
+    --fc-button-text-color: rgb(59, 56, 56);
+    --fc-button-bg-color:none;
+    --fc-button-border-color: none;
+    --fc-button-hover-bg-color:none;
+    
+    --fc-button-hover-border-color: none;
+    --fc-button-active-bg-color: none;
+    --fc-button-active-border-color: none;
+    --fc-button-active-border: none;
+  
+    --fc-event-bg-color: #f17fed;
+    --fc-event-border-color: #c250d6;
+    --fc-event-text-color: #fff;
+    --fc-event-selected-overlay-color: rgba(0, 0, 0, 0.25);
+  
+    --fc-more-link-bg-color: #d0d0d0;
+    --fc-more-link-text-color: inherit;
+  
+    --fc-event-resizer-thickness: 8px;
+    --fc-event-resizer-dot-total-width: 8px;
+    --fc-event-resizer-dot-border-width: 1px;
+  
+    --fc-non-business-color: rgba(220, 0, 0, 0.3);
+    --fc-bg-event-color: rgb(143, 223, 130);
+    --fc-bg-event-opacity: 0.3;
+    --fc-highlight-color: #b9c1f0;
+    --fc-today-bg-color:#cacaca;
+    
+    --fc-now-indicator-color: red;
+  }
+  .cal{
+      margin-top: 5px;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  .fc-toolbar h2 {
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    }
+    
+  .fc .fc-button-group{
+    gap: 4px;
+    color: grey;
+    border: none;
+  }
+  .fc .fc-button-primary{
+    border: none;
+  }
+  .fc .fc-toolbar{
+    justify-content: flex-start;
+    gap: 15px;
+    align-items: flex-start;
+    
+  }
+  .fc-title::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    padding: 0 8px;
+    text-decoration: inherit;
+    content: "\f017";
+  }
+  .fc-icon-calendar:before{
+   content: "📅";
+   size: 30px;
+   
+  
+  }
+  .fc-icon-calendar{
+    pointer-events: none !important;
+  }
+  .fc-para-button{
+    align-items: flex-start;
+    font-weight: 500 !important;
+    font-size: smaller !important;
+    text-align: left !important;
+    color: red;
+    max-width: 500px !important;
+    padding-left: 0px !important; 
+    pointer-events: none !important;
+  }
+  .ca-add-btn{
+    position: absolute;
+    top: 90px;
+    right: 170px;
+    color: white;
+    font-weight: 600;
+    background-color: #3951db;
+    border-radius: 4px;
+    height: 40px;
+    width: 40px;
+    border: none;
+    font-size: 20px;
+    align-items: center;
+  }
+  .fc .fc-daygrid-day-number {
+    font-weight: bold;
+  }
+  .fc .fc-col-header-cell-cushion{
+    color: grey;
+  }
+  .fc .fc-highlight{
+    border: 1px solid #586bd5;
+  }
+  .fc-day-today{
+    border: 1px solid rgb(88, 26, 88);
+  }
+  .fc-button {
+    box-shadow: none !important;
+  }
+  .add-event{
+    position: fixed;
+    top: 0;
+    left:0;
+    right:0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+.event-box{
+    
+    background-color: white;
+    display: flex;
+    gap: 35px;
+    flex-direction: column;
+    height: 690px;
+    width: 470px;
+    padding: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: auto;
+
+}
+
+#milestone,#course,#plan{
+    border: none;
+}
+input{
+    padding: 12px;
+    border-radius: 5px;
+    border: 2px solid rgb(188, 185, 185);
+   
+}
+option{
+    padding: 10px;
+}
+.ev-head{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+#advisor{
+    padding: 12px;
+    
+    border-radius: 5px;
+    border: 2px solid rgb(188, 185, 185);
+    width: 91%;
+}
+.ev-ro{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.ev-r6{
+    display: flex;
+    flex-direction: row;
+    gap: 23px;
+}
+#in-title{
+    width: 390px;
+    
+    
+}
+.zoom-btn,.save-btn{
+    padding: 12px;
+    border-radius: 5px;
+    background-color: rgb(23, 141, 239);
+    color: white;
+    border: none;
+    width: 150px;
+    font-size: 15px;
+}
+.save-btn{
+    margin-left: 240px;
+}
+.ev-title{
+    font-weight: bold;
+    font-size: larger;
+}
+
+.date,.time{
+    flex: 2;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+}
+#ev-date{
+    width: 150px;
+}
+#ev-time{
+    width: 150px;
+}
+.ev-r7{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+.ev-zoom{
+    font-size: x-small;
+    font-weight: bold;
+    color: rgb(33, 32, 32);
+}
+.ev-r8{
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+#ev-add{
+    width: 360px;
+}
+.ev-close{
+  cursor: pointer;
+}
+.fc-scrollgrid-sync-inner:hover{
+  background-color: #cacaca;
+}

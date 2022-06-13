@@ -1,0 +1,54 @@
+@import "common.less";
+body {
+    margin: 0px;
+}
+.login {
+    height:100vh;
+    background-color: @backcolor--white;
+
+    .dark& {
+        background-color:@backcolor--dark;
+    }
+
+    &_title {
+        color:@color--primary;
+        margin-bottom: 40px;
+        font-size: 48px;
+        .dark & {
+            color:@color--white;
+        }
+    }
+
+    &_card-container {
+        max-width: 350px;
+        padding: 20px;
+
+        &.card {
+            background-color: #FFFFFF;
+            margin: 0 auto;
+            border-color: transparent;
+            .dark & {
+                background-color:@backcolor--black;
+            }
+        }
+    }
+
+    &_form{
+        .dark & {
+            color:#fff;
+        }
+
+        .form-group {
+            margin-top: 25px;
+        }
+    }
+
+    &_social-icon{
+        li{
+            padding: 0px 6px;
+        }
+    }
+
+    
+    
+}
