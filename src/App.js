@@ -27,6 +27,7 @@ import FeedbackAdvisor from "./components/Pages/StudentPages/FeedbackAdvisor"
 import NewPlan from "./components/Pages/AdvisorPages/Plan/NewPlan"
 import PhaseOne from "./components/Pages/AdvisorPages/Plan/PhaseOne"
 import AdvisorDashboard from "./components/Pages/AdvisorPages/Dashboard"
+import AdvisorTransaction from "./components/Pages/AdvisorPages/Transaction"
 class App extends Component {
     render() {
         return (
@@ -62,7 +63,8 @@ class App extends Component {
                         <Route path="/advisor/dashboard" element={<AdvisorDashboard />} />
                         <Route path="/advisor/new-plan" element={<NewPlan />} />
                         <Route path="/advisor/phase-one" element={<PhaseOne />} />
-                    </Routes>
+                        <Route path="/advisor/transaction" element={<AdvisorTransaction />} />
+                        </Routes>
                 </BrowserRouter>
             </>
         );
