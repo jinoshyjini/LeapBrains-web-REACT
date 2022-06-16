@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom'
 import Explore from "../Explore"
-
+import AddNewCards from "../AddCards"
 class Index extends Component {
     constructor(props) {
         super(props);
@@ -23,6 +23,9 @@ class Index extends Component {
         this.props.showFriendNetwork(e, true)
     }
     render() {
+        const AddNewData = [
+          
+        ];
         let { isExplore, isFriends } = this.state
         return (
             <>
@@ -31,7 +34,11 @@ class Index extends Component {
                         <h5>My Friends<button className="btn model-content__cta cta--button">Add new Friends</button>
 
                         </h5>
-                        <div className="advisorcontent">
+                        {AddNewData && AddNewData.length > 0 ?
+                            <AddNewCards
+                                AddNewData={AddNewData}
+                            /> :
+                            <div className="advisorcontent">
                             <h6 className="model-content__sub-title">You do not have any Friends yet. Do you want to
                                 <u className="model-content__undeline-title" >
                                     <span onClick={(e) => this.handleShow(e)}>
@@ -41,6 +48,8 @@ class Index extends Component {
                                 </u> ?
                             </h6>
                         </div>
+                        }
+                       
                     </div>
                 }
                 {isExplore &&

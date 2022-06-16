@@ -6,8 +6,7 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import Layouts from "../../../Layout/Sidebar"
 import '../../../../assets/css/Schedule.less';
 import Search from "../../../CommonComponents/Search";
-import Select from 'react-select'
-var calendar = new FullCalendar();
+
 
 class Index extends Component {
     constructor() {
@@ -21,7 +20,6 @@ class Index extends Component {
         };
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
-        this.handleSelect = this.handleSelect.bind(this)
     }
 
     handleSubmit(event){
@@ -33,6 +31,7 @@ class Index extends Component {
     }
     handleChange(event){
         this.setState({
+          
           [event.target.name] : event.target.value
         })
         console.log(this.state.title)
@@ -47,16 +46,10 @@ class Index extends Component {
     handleClose = () => {
         this.setState({ ...this.state, show: false })
     }
-
-    handleSelect(valObj, action) {
-        if (action === "clear") {
-            return;
-        } else {
-            calendar.current.getApi().changeView(valObj.value);
-        }
-    }
     
     render() {
+        //const events = [{ title: this.state.title, date:this.state.date }]; 
+        console.log(this.state.date)
        const events= [
             
             {
@@ -67,23 +60,17 @@ class Index extends Component {
                 title: '8 présents',
                 start: '2022-06-08T04:05:00'
             },
-        ];
-
-        const CalendarViews = [
-            { value: 'dayGridMonth', label: 'Month' },
-            { value: 'timeGridWeek', label: 'Week' },
-            { value: 'timeGridDay', label: 'Day' }
-        ];
-
+        ]
+        
         return (
             <>
-                <Layouts />
-                <div className="Schedule">
+                <Layouts /> 
+                
+                    <div className="cal">
                     <FullCalendar
-                        ref={calendar}
                         customButtons={{
-                            myCustomButton: { icon: 'calendar', }
-                            
+                            myCustomButton: { icon: 'calendar', },
+                            para: { text: 'Here all your planned events. You will find information for each event as well as you can plan new event', },
                         }}
                         plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]} 
                         events={events}
@@ -93,34 +80,30 @@ class Index extends Component {
                         editable='true'
                         selectable='true'
                         dayCellClassNames={'newclass'}
-                        headerToolbar={{ left: "title,", center: "prev,myCustomButton,next", right: "" }} 
                         
+                        headerToolbar={{ left: "title,", center: "prev,myCustomButton,next", right: "" }} 
                     />
-                    
                     <div className="top-cal">
-                        <Search
-                            placeholder=""
-                        />
-                        <svg width="35" height="35" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M17 13C17 12.4477 17.4477 12 18 12H19C19.5523 12 20 12.4477 20 13V14H27C27.5523 14 28 14.4477 28 15C28 15.5523 27.5523 16 27 16H20V17C20 17.5523 19.5523 18 19 18H18C17.4477 18 17 17.5523 17 17V16H13C12.4477 16 12 15.5523 12 15C12 14.4477 12.4477 14 13 14H17V13ZM13 24C12.4477 24 12 24.4477 12 25C12 25.5523 12.4477 26 13 26H22V27C22 27.5523 22.4477 28 23 28H24C24.5523 28 25 27.5523 25 27V26H27C27.5523 26 28 25.5523 28 25C28 24.4477 27.5523 24 27 24H25V23C25 22.4477 24.5523 22 24 22H23C22.4477 22 22 22.4477 22 23V24H13Z" fill="#1B1C1E"/></svg>
-                        <button className="cal-btn" onClick={this.handleDateClick}>+</button>
+                    <div class="cal-search">
+                    <span  class="cal-searchIcon">
+                        <svg width="18" height="19" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.5046 2.93061C11.3749 -0.101869 6.28112 -0.101869 3.15144 2.93061C0.0224364 5.96374 0.0224364 10.8987 3.15144 13.9318C5.93851 16.6316 10.2792 16.9209 13.4069 14.8127C13.4727 15.1144 13.6233 15.4024 13.8655 15.637L18.4233 20.0533C19.0875 20.6955 20.1608 20.6955 20.8216 20.0533C21.4852 19.4104 21.4852 18.3704 20.8216 17.7295L16.2638 13.3119C16.023 13.0792 15.7251 12.9326 15.4137 12.8688C17.5909 9.83766 17.2923 5.63242 14.5046 2.93061ZM13.0656 12.5375C10.729 14.8015 6.92633 14.8015 4.59043 12.5375C2.25521 10.2735 2.25521 6.58956 4.59043 4.32556C6.92633 2.06221 10.729 2.06221 13.0656 4.32556C15.4022 6.58956 15.4022 10.2735 13.0656 12.5375Z" fill="#3F51B5"/>
+                        <path d="M13.8954 14.7061L13.7384 13.9862L13.1274 14.3981C10.1899 16.3781 6.11176 16.1032 3.49945 13.5728C0.573125 10.7361 0.5731 6.12639 3.49937 3.28969C6.43515 0.445102 11.2208 0.44506 14.1566 3.28965C16.7639 5.81656 17.0422 9.7445 15.0076 12.5771L14.5575 13.2039L15.3134 13.3587C15.5389 13.4048 15.7488 13.5097 15.9161 13.6712C15.9162 13.6713 15.9163 13.6714 15.9164 13.6715L20.4736 18.0885L20.4743 18.0891C20.934 18.5332 20.9348 19.2474 20.4737 19.6942L20.4731 19.6947C20.0069 20.1479 19.2418 20.1492 18.7709 19.6938L14.2134 15.2779C14.0453 15.115 13.9412 14.9164 13.8954 14.7061ZM4.24239 12.8965L4.24245 12.8965C6.77229 15.3485 10.8831 15.3485 13.4135 12.8966C15.9529 10.4361 15.9529 6.42694 13.4135 3.96647L13.4135 3.96642C10.883 1.51529 6.77233 1.51521 4.2425 3.96647L4.24239 3.96658C1.70456 6.42702 1.70456 10.436 4.24239 12.8965Z" stroke="#3F51B5" strokeOpacity="0.2"/>
+                        </svg>
+                    </span>
+                    <input type="text" class="cal-searchTerm" placeholder="" />
                     </div>
-                    {/* <div className="cal-select-month">
-                        <select name="month" id="cal-month">
-                            <option className="fc-dayGridMonth-button fc-button fc-button-primary fc-button-active" value="month">Month</option>
-                            <option className="fc-timeGridWeek-button fc-button fc-button-primary" value="week">Week</option>
-                            <option className="fc-timeGridDay-button fc-button fc-button-primary" value="day">Day</option>
-                            
-                        </select>
-                    </div> */}
-
+                    <svg width="35" height="35" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" clipRule="evenodd" d="M17 13C17 12.4477 17.4477 12 18 12H19C19.5523 12 20 12.4477 20 13V14H27C27.5523 14 28 14.4477 28 15C28 15.5523 27.5523 16 27 16H20V17C20 17.5523 19.5523 18 19 18H18C17.4477 18 17 17.5523 17 17V16H13C12.4477 16 12 15.5523 12 15C12 14.4477 12.4477 14 13 14H17V13ZM13 24C12.4477 24 12 24.4477 12 25C12 25.5523 12.4477 26 13 26H22V27C22 27.5523 22.4477 28 23 28H24C24.5523 28 25 27.5523 25 27V26H27C27.5523 26 28 25.5523 28 25C28 24.4477 27.5523 24 27 24H25V23C25 22.4477 24.5523 22 24 22H23C22.4477 22 22 22.4477 22 23V24H13Z" fill="#1B1C1E"/></svg>
+                    <button className="cal-btn" onClick={this.handleDateClick}>+</button>
+                    </div>
                     <div className="cal-select-month">
-                        <Select
-                            closeMenuOnSelect={true}
-                            options={CalendarViews}
-                            onChange={(value, { action }, name) => this.handleSelect(value, action)}
-                        />
+                    <select name="month" id="cal-month">
+                          <option className="fc-dayGridMonth-button fc-button fc-button-primary fc-button-active"value="month">Month</option>
+                          <option className="fc-timeGridWeek-button fc-button fc-button-primary" value="week">Week</option>
+                          <option className="fc-timeGridDay-button fc-button fc-button-primary" value="day">Day</option>
+                         
+                    </select>
                     </div>
-                    
                     <div className="cal-para"><p>Here all your planned events. You will find information for each event as well as you can plan new event</p></div>
                     {this.state.show &&
                         <div className='add-event'>
@@ -178,7 +161,7 @@ class Index extends Component {
                             </div>
                         </div>
                     }
-                </div>
+                    </div>
                 
             </>
         );

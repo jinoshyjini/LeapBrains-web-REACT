@@ -1,43 +1,162 @@
-.box-models{
-    border: 15px solid rgba(63, 81, 181, 0.1);
-    padding-top: 0px;
-    padding-left: 96px;
+@import "variables.less";
+
+.box-models {
+    border: 15px solid @color--gray;
+    padding: 20px;
     margin-left: 100px;
-    height: 750px;
+    height: 100%;
 }
-.cnts{
-    margin-top: 20px;
-}
-.btnscnt{
-    display: flex;
-    justify-content: flex-end;
-}
-.btns{
-    width: 200px !important;
-    margin-right: 40px;
-}
-.btmcnts{
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-    
-}
-.addbox{
-    border: 3px solid rgba(63, 81, 181, 0.842);
-    width: 300px;
-    height: 200px;
-    border-radius: 20px;
-    background-color: rgb(255, 255, 255);
-    cursor: pointer;
-}
-.addboxcnt{
-    margin: 50px;
+
+.addboxcnt {
     align-items: center;
     display: flex;
     justify-content: center;
 }
-.addboxdown{
+.plusicon{
+    width: 100px;
+    height: 100px;
+}
+.addboxdown {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     text-align: center;
+}
+
+.boxes {
+    border: 2px solid @color--light-blue;
+    border-radius: 15px;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxadd {
+    display: flex;
+    justify-content: center;
+}
+
+.centercnt {
+    margin-top: 50px;
+    height: 100%;
+    padding: 20px;
+}
+
+// with data
+.endcols {
+    display: flex;
+    justify-content: end;
+}
+
+.reveicon {
+    margin-right: 10px;
+}
+
+.planbtnss {
+    background-color: @color--light-blue;
+    border-radius: 46px;
+    color: @color--white;
+}
+
+.tabcnt {
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 700px) {
+    .box-models {
+        padding: 10px;
+        height: 100vh;
+        margin-left: 0px;
+    }
+    .plusicon{
+        width: 50px;
+        height: 50px;
+    }
+    .addboxcnt {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .addboxdown {
+        margin-top: 5px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .endcols {
+        display: flex;
+        justify-content: end;
+    }
+
+    .boxes {
+        border: 2px solid @color--light-blue;
+        border-radius: 15px;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .planbtn {
+        font-size:x-small;
+    }
+
+    .centercnt {
+        margin-top: 50px;
+        height: 100%;
+        padding: 20px;
+    }
+
+    .boxadd {
+        display: flex;
+        justify-content: center;
+    }
+
+    .reveicon {
+        margin-right: 10px;
+    }
+
+    .tabcnt {
+        margin-top: 50px;
+    }
+
+}
+
+// Mywork -> Myplan Section
+.topplancnt{
+    margin-top: 15px;
+}
+.plancards {
+    width: 320px;
+    height: 300px;
+    border: 1px solid @color--text-gray;
+    border-radius: 15px;
+    margin-top: 40px;
+    .cardcnt{
+        margin-top: 10px;
+    }
+    .planbtns{
+        width: 110px;
+        border-radius: 20px;
+    }
+    .boxcontain{
+        border-radius: 10px;
+        background-color: @backcolor--gray;
+        width: max-content;
+        padding: 5px;
+    }
+    .cardtopic{
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .subtopic{
+        font-weight: lighter;
+    }
+    .nextmilestonetext{
+        text-decoration: underline;
+    }
 }

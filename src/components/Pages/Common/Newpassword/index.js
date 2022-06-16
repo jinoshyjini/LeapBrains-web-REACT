@@ -8,6 +8,7 @@ class Index extends Component {
         return (
             <>
                 <div className="vertical-center">
+                    <div className="container">
                     <div><h1 className="text-center">Forgot your password?</h1></div>
                     <div><h1 className="text-center">We can help.</h1></div>
 
@@ -35,9 +36,8 @@ class Index extends Component {
                         </Link>
                     </div>
                     </center>
-                    
-                    <br />
-                    <div><p className="text-center">Remember your password?<Link className="cta--underline" to="/">Sign In</Link></p></div>
+                    <div className="mt-4"><p className="text-center">Remember your password?<Link className="cta--underline" to="/">Sign In</Link></p></div>
+                    </div>
                 </div>
             </>
         );
