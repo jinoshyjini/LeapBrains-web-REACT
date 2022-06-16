@@ -39,7 +39,7 @@ body {
         }
 
         .form-group {
-            margin-top: 25px;
+            margin-top: 20px;
         }
     }
 
@@ -48,7 +48,30 @@ body {
             padding: 0px 6px;
         }
     }
+}
 
-    
-    
+@media screen and (max-width: 768px) {
+    .login {
+        &_title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .list-inlibeblock{
+            margin-bottom: 0px;
+            li{
+                svg {
+                    width:35px;
+                    height:35px;
+                }
+            }
+        }
+        &_card-container {
+            padding: 10px 20px;
+        }
+        &_form{
+            .form-group:first-child {
+                margin-top: 0px;
+            }
+        }
+    }
 }

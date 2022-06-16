@@ -47,8 +47,8 @@ class Index extends Component {
                         </ul>
 
                         <div className="card login_card-container">
-                            <p class="or"><span>or</span></p>
-                            <Form className="login_form mb-5">
+                            <p className="or"><span>or</span></p>
+                            <Form className="login_form mb-3">
                                 <div className="form-group">
                                     <input
                                         type="text"
@@ -63,9 +63,9 @@ class Index extends Component {
                                         type="password"
                                         className="form-control"
                                         name="password"
-                                        placeholder="password"
+                                        placeholder="Password"
                                     />
-                                    {/* <p className="cta--text">Must contain 10 symbols and at least 1 number</p> */}
+                                    <p className="cta--text mb-1">Must contain 10 symbols and at least 1 number</p>
                                 </div>
                                 <div className="form-group">
                                     <input

@@ -15,7 +15,6 @@ import DocumentsList from "../../../CommonComponents/DocumentsList";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import "../../../../assets/css/studentdashboard.less"
-import { Link } from "react-router-dom";
 
 class Index extends Component {
     constructor(props) {
@@ -297,7 +296,7 @@ class Index extends Component {
                 <Layouts />
                 <div className="Templates main-content">
                     <div className="row m-0">
-                        <div className="col-sm-8 p-0 mt-5">
+                        <div className="col-lg-9 col-md-8 col-sm-8 col-12 p-0">
                             <div className="row m-0 mb-4">
                                 <div className="col-sm-12 p-0">
                                     <div className="main-content__center">
@@ -369,7 +368,7 @@ class Index extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-sm-4 pe-0">
+                        <div className="col-lg-3 col-md-4 col-sm-4 col-12 pe-0">
                             <div className="Schedule_calendar">
                                 <Calendar onChange={this.setDate} value={this.date}  />
                             </div>

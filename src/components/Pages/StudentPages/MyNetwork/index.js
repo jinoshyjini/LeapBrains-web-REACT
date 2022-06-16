@@ -37,7 +37,7 @@ class Index extends Component {
         return (
             <>
                 <Layouts />
-                <div className="box-model ">
+                <div className="Templates bg-temp">
                     <div className="model-content">
                             <div >
                                 {isShowNetwork &&<h5>
