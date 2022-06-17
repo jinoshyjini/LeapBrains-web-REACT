@@ -1,21 +1,18 @@
 @import "variables.less";
 
-.box-models {
-    border: 15px solid @color--gray;
-    padding: 20px;
-    margin-left: 100px;
-    height: 100%;
-}
 
 .addboxcnt {
     align-items: center;
     display: flex;
     justify-content: center;
+    
 }
-.plusicon{
+
+.plusicon {
     width: 100px;
     height: 100px;
 }
+
 .addboxdown {
     margin-top: 20px;
     display: flex;
@@ -32,6 +29,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .boxadd {
     display: flex;
     justify-content: center;
@@ -69,10 +67,12 @@
         height: 100vh;
         margin-left: 0px;
     }
-    .plusicon{
+
+    .plusicon {
         width: 50px;
         height: 50px;
     }
+
     .addboxcnt {
         align-items: center;
         display: flex;
@@ -102,7 +102,7 @@
     }
 
     .planbtn {
-        font-size:x-small;
+        font-size: x-small;
     }
 
     .centercnt {
@@ -127,36 +127,148 @@
 }
 
 // Mywork -> Myplan Section
-.topplancnt{
+.topplancnt {
     margin-top: 15px;
 }
+
+.cardcontainer {
+    border: 1px solid red;
+}
+
 .plancards {
-    width: 320px;
-    height: 300px;
+    width: 280px;
+    height: 310px;
     border: 1px solid @color--text-gray;
     border-radius: 15px;
     margin-top: 40px;
-    .cardcnt{
+    color: black;
+    .plancardcnt {
         margin-top: 10px;
     }
-    .planbtns{
+    .planbtns {
         width: 110px;
         border-radius: 20px;
     }
-    .boxcontain{
-        border-radius: 10px;
+    .planboxcontain {
+        border-radius: 5px;
         background-color: @backcolor--gray;
         width: max-content;
-        padding: 5px;
+        padding: 10px;
+        margin-top: 20px;
     }
-    .cardtopic{
+    .plancardtopic {
         font-weight: bold;
         font-size: 20px;
+        margin-top: 5px;
     }
-    .subtopic{
+    .plansubtopic {
         font-weight: lighter;
     }
-    .nextmilestonetext{
+    .planmilestone{
+        font-size: 18px;
+    }
+    .cardcoursetopic {
+        font-size: 18;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+
+    .cardcoursetop {
+        font-size: 18;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    .nextmilestonetext {
+        margin-top: 15px;
         text-decoration: underline;
     }
+
+
+}
+
+.modal-contents {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    padding: 20px;
+    
+}
+.nextmilestonecoursetext {
+    margin-top: 20px;
+    text-decoration: underline;
+}
+//Course tab Section
+.coursecards{
+    width: 280px;
+    height: 330px;
+    border: 1px solid @color--text-gray;
+    border-radius: 15px;
+    margin-top: 40px;
+    color: black;
+    .coursebtns {
+        width: 110px;
+        border-radius: 20px;
+    }
+    .coursecardcnt{
+        margin-top: 20px;
+    }
+    .courseboxcontain{
+        border-radius: 5px;
+        background-color: @backcolor--gray;
+        width: max-content;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .cardcoursetop{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .coursetext{
+        font-size: 15px;
+        .subcoursetext{
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+}
+// MileStone Tab Section
+.milestonecardsection {
+    .milestonecards {
+        width: 250px;
+        height: 300px;
+        border: 1px solid @color--text-gray;
+        border-radius: 15px;
+        margin-top: 40px;
+        color: black;
+        .milestonecardcnt {
+            margin-top: 10px;
+
+            .milestonetopictext {
+                font-size: 20px;
+                font-weight: bold;
+                margin-top: 10px;
+            }
+
+            .milestonetext {
+                font-size: 15px;
+
+                .submilestonetext {
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+
+            .milestoneend {
+                margin-top: 40px;
+            }
+
+            .progress {
+                height: 5px;
+            }
+        }
+    }
+
 }

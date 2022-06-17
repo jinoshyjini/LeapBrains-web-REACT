@@ -1,0 +1,106 @@
+@import "variables.less";
+.notification{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .notify-head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .notify-head-right{
+            display: flex;
+            gap: 30px;
+            align-items: center;
+
+            .title{
+               font-weight: 630;
+               font-size: 40px; 
+            }
+         }
+         .link{
+            font-size: smaller;
+            text-decoration: underline;
+        }
+    }
+    .container-notify{
+        .nav-link{
+            color: black;
+            font-weight: 450;
+
+            &.active{
+                color: @color--text-blue;
+                border-bottom: 2px solid #303F9F;
+            }
+        }
+    }
+    
+}
+.container-notify{
+    .nav{
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+    }
+    .notify-box{
+        width: 600px;
+        margin: auto;
+        background-color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 235px;
+        gap: 20px;
+        font-size: larger;
+        font-weight: 500;
+        border: 1px solid rgb(201, 201, 201);
+        border-radius: 20px;
+        color: black;
+        
+    }
+}
+
+.container-changes{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    border: 1px solid black;
+    //width: 58%;
+    min-width: 400px;
+    padding: 10px;
+    border-radius: 13px;
+    gap: 10px;
+    color: black;
+    .active{
+        height: 5px;
+        width: 5px;
+        margin-top: 10px;
+        background-color: green;
+        border-radius: 100%;
+        
+    }
+
+    .change-box{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        
+        .top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .name{
+                font-size: small;
+                font-weight: 550;
+            }
+            .time-min{
+                font-size: small;
+                color: rgb(158, 154, 154);
+            }
+        }
+        .message{
+            
+        }
+    }
+}

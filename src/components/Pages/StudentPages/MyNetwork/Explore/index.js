@@ -108,20 +108,22 @@ class Index extends Component {
                             Explore {title}
                         </h5>
                     </div>
-                    <div className="col-6 p-3">
+                    {/* <div className="col-6 p-3">
 
                         <Search />
 
-                    </div>
+                    </div> */}
                 </div>
                 <div >
                     <h5>Featured </h5>
                     <div className="mt-0">
+                        <div className="SelectAdvisors__list">
                         <SelectAdvisors
                             OwlCarouselData={OwlCarouselData}
                             Carouselitems={4}
                             islooping={true}
                         />
+                        </div>
                     </div>
                 </div>
                 <div >

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 import "../../../../../assets/css/network.less"
 import Dropdown from 'react-bootstrap/Dropdown'
 import Card from 'react-bootstrap/Card'
@@ -110,9 +110,11 @@ class Index extends Component {
                             </div>
                             <div className="row">
                                 <div className="col-sm-12">
+                                   <Link to="/profile" >
                                     <h3 className="card__item__lists__titel">
                                         {element.AdvisorsName}
                                     </h3>
+                                    </Link>
                                     <div className="card__item__lists__location">
                                         {element.Location &&
                                             <p>

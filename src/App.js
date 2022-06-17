@@ -23,10 +23,15 @@ import Schedule from "./components/Pages/StudentPages/Schedule"
 import SelectFriend from "./components/Pages/StudentPages/SelectFriend"
 import StudentNewplans from "./components/Pages/StudentPages/Plans/StudentNewplans"
 import FeedbackAdvisor from "./components/Pages/StudentPages/FeedbackAdvisor"
+import Notification from "./components/Pages/StudentPages/Notification"
+
 // Advisor pages
 import NewPlan from "./components/Pages/AdvisorPages/Plan/NewPlan"
 import PhaseOne from "./components/Pages/AdvisorPages/Plan/PhaseOne"
 import AdvisorDashboard from "./components/Pages/AdvisorPages/Dashboard"
+// import Transaction from "./components/Pages/AdvisorPages/Transaction"
+import Profile from "./components/Pages/StudentPages/MyNetwork/Profile"
+
 class App extends Component {
     render() {
         return (
@@ -56,12 +61,15 @@ class App extends Component {
                         <Route path="/SelectFriend" element={<SelectFriend />} />
                         <Route path="/StudentNewplans" element={<StudentNewplans />} />
                         <Route path="/FeedbackAdvisor" element={<FeedbackAdvisor />} />
-
-
+                        <Route path="/Notification" element={<Notification />} />
+                        <Route path="/Profile" element={<Profile />} />
+                        
                         {/* Advisor Routes */}
                         <Route path="/advisor/dashboard" element={<AdvisorDashboard />} />
                         <Route path="/advisor/new-plan" element={<NewPlan />} />
                         <Route path="/advisor/phase-one" element={<PhaseOne />} />
+                        {/* <Route path="/advisor/transaction" element={<Transaction />} /> */}
+                        
                     </Routes>
                 </BrowserRouter>
             </>

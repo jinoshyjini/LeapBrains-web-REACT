@@ -10,7 +10,7 @@ import CircleAddCta from "../../../CommonComponents/CircleAddCta";
 import GetAdvisors from "../../../CommonComponents/GetAdvisors";
 import RecommendedFriends from "../../../CommonComponents/RecommendedFriends";
 import DocumentsList from "../../../CommonComponents/DocumentsList";
-
+import Chatbox from "../../../CommonComponents/ChatBox";
 
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
@@ -377,7 +377,9 @@ class Index extends Component {
                             </div>
                         </div>
                     </div>
+                    <Chatbox />
                 </div>
+                
             </>
         );
     }
